@@ -1,0 +1,60 @@
+@import "variables";
+
+.search {
+  text-align: center;
+  height: 100%;
+
+  .searchInput {
+    background: $content-background-color;
+    border: darkgrey 1px solid;
+    width: 60%;
+    height: 40px;
+    padding: 5px 10px;
+    font-size: 25px;
+    color: $text-color;
+  }
+
+  .trackList {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+
+    .track {
+      display: flex;
+      flex-flow: row wrap;
+      align-content: space-between;
+      width: 300px;
+      height: 300px;
+      margin: 0 15px 30px 15px;
+
+      .trackData {
+        width: 100%;
+        padding: 5px 0;
+        background: $content-background-color;
+        opacity: 0.9;
+      }
+
+      .icon {
+        margin: 0 5px;
+        font-size: 30px;
+
+        &Disabled {
+          color: #2B2B2B;
+          cursor: auto;
+        }
+      }
+    }
+  }
+
+  .searchContainer {
+    margin-bottom: 20px;
+  }
+
+  .tracksContainer {
+    height: 80%;
+    margin-bottom: 10px;
+    overflow-y: auto;
+  }
+}

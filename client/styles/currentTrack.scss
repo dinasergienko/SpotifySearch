@@ -1,0 +1,47 @@
+@import "variables";
+
+.currentTrack {
+  height: 380px;
+  width: 50%;
+  margin: 150px auto;
+  padding: 10px 0 50px;
+  background: $header-background-color;
+  text-align: center;
+
+  .manageBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+
+    .icon {
+      margin: 2px 7px;
+      font-size: 22px;
+
+      &Disabled {
+        color: gray;
+        cursor: auto;
+      }
+
+      &Angle {
+        font-size: 30px;
+      }
+
+      &Music {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .trackImage {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .currentTrack {
+    width: 80%;
+    margin: 50px auto;
+  }
+
+}

@@ -1,0 +1,49 @@
+@import "variables.scss";
+
+.nav {
+  background: $block-background-color;
+
+  .list {
+    list-style: none;
+    padding: 20px;
+
+    .listItem {
+      padding: 85px 0;
+      margin-bottom: 20px;
+      background: $content-background-color;
+      font-size: 20px;
+      text-align: center;
+      transition: background ease 0.4s;
+
+      &:hover {
+        background: $hover-background-color;
+        transition: background ease 0.4s;
+      }
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+
+      .link {
+        padding: 70px 53px;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 700px) {
+  .nav {
+    .list {
+      display: flex;
+      justify-content: space-between;
+
+      .listItem {
+        width: 30%;
+        margin-bottom: 0;
+        padding: 20px 0;
+      }
+    }
+  }
+
+}

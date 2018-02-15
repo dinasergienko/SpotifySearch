@@ -1,0 +1,64 @@
+.trackPreview {
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+
+  .player {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    opacity: 0.9;
+    padding: 5px 10px;
+    width: 100%;
+
+    .icon {
+      margin: 3px;
+      color: black;
+      cursor: pointer;
+
+      &Play {
+        font-size: 35px;
+      }
+
+      &Repeat {
+        font-size: 25px;
+
+        &Disabled {
+          color: lightgray;
+        }
+      }
+
+      &Volume {
+        font-size: 27px;
+      }
+    }
+
+    .trackRange {
+      width: 150px;
+
+      &[type=range] {
+        -webkit-appearance: none;
+
+        &:focus {
+          outline: none;
+        }
+
+        &::-webkit-slider-runnable-track {
+          height: 5px;
+          cursor: pointer;
+          background: rgba(222, 222, 222, 0.87);
+        }
+
+        &::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          height: 14px;
+          width: 14px;
+          background: #000000;
+          cursor: pointer;
+          margin-top: -5px;
+        }
+      }
+    }
+  }
+}

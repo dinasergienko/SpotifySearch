@@ -1,0 +1,32 @@
+.playlistsContainer {
+  height: 90%;
+  overflow-y: auto;
+
+  .playlists {
+    list-style: none;
+    padding-left: 0;
+
+    .playlistItem {
+      padding: 20px 20px;
+      margin-bottom: 10px;
+      font-size: 20px;
+      background:  #1C1C1C;
+      border-left: 10px solid #888888;;
+
+      .noTracks{
+        float: right;
+        opacity: 0.5;
+      }
+    }
+
+    .playlistItemWithTracks {
+      cursor: pointer;
+      transition: background ease 0.4s;
+
+      &:hover{
+        background: #888888;
+        transition: background ease 0.4s;
+      }
+    }
+  }
+}

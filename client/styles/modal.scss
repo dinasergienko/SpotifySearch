@@ -1,0 +1,47 @@
+.modalContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.15);
+
+  .modal {
+    position: absolute;
+    top: 70px;
+    left: 250px;
+    bottom: 70px;
+    right: 250px;
+    background: #292929;
+    padding: 20px;
+    max-height: 100%;
+
+    .header{
+      background: #888888;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+
+      .title {
+        font-size: 35px;
+        font-weight: 200;
+      }
+
+      .closeIcon {
+        font-size: 40px;
+        cursor: pointer;
+
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .modalContainer {
+    .modal {
+      left: 100px;
+      right: 100px;
+    }
+  }
+
+}

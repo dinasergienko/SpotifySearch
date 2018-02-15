@@ -1,0 +1,78 @@
+.playlistView {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  height: 100%;
+  font-size: 20px;
+
+  .playlistHeader {
+    display: flex;
+    align-items: flex-start;
+
+    .checkbox {
+      display: block;
+    }
+
+    .image {
+      width: 160px;
+      height: 160px;
+      margin-right: 20px;
+    }
+
+    .tracksCount {
+      margin: 0;
+    }
+
+  }
+
+
+  .tracks {
+    overflow-y: auto;
+    list-style: none;
+    padding-left: 0;
+    max-height: 67%;
+
+    .trackItem {
+      background:  #1C1C1C;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-right: 20px;
+
+      .trackData {
+        display: flex;
+        align-items: center;
+      }
+
+      .trackImage {
+        margin-right: 20px;
+      }
+
+      .icon {
+        margin: 0 5px;
+
+        &Disabled {
+          cursor: auto;
+          color: gray;
+        }
+      }
+    }
+
+    &Compressed {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+
+      .trackItem {
+        display: inline-flex;
+        margin-right: 17px;
+        margin-bottom: 17px;
+
+        .trackName {
+          display: none;
+        }
+      }
+    }
+  }
+}
