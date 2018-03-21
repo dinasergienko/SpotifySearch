@@ -1,45 +1,45 @@
 {
-  "name": "spotify-search",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "express": "^4.16.2",
-    "font-awesome": "^4.7.0",
-    "prop-types": "^15.6.0",
-    "react": "16.2.0",
-    "react-dom": "16.2.0",
-    "react-modal": "^3.1.11",
-    "react-redux": "^5.0.6",
-    "react-router": "^4.2.0",
-    "react-router-dom": "^4.2.2",
-    "react-scripts": "^1.1.0",
-    "redux": "^3.7.2",
-    "request": "^2.83.0",
-    "spotify-web-api-js": "^0.23.0"
-  },
-  "scripts": {
-    "build-dev": "set NODE_ENV=development && babel-node server.js",
-    "build-prod": "set NODE_ENV=production&& webpack --progress && babel-node server.js"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
-    "css-loader": "^0.28.9",
-    "file-loader": "^1.1.6",
-    "html-webpack-plugin": "^2.30.1",
-    "node-sass": "^4.7.2",
-    "path": "^0.12.7",
-    "react-hot-loader": "^3.1.3",
-    "sass-loader": "^6.0.6",
-    "style-loader": "^0.20.1",
-    "url": "^0.11.0",
-    "url-loader": "^0.6.2",
-    "webpack": "^3.10.0",
-    "webpack-config": "^7.5.0",
-    "webpack-dev-middleware": "^2.0.4",
-    "webpack-hot-middleware": "^2.21.0"
-  }
+    "name": "spotify-search",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "express": "^4.16.2",
+        "font-awesome": "^4.7.0",
+        "prop-types": "^15.6.0",
+        "react": "16.2.0",
+        "react-dom": "16.2.0",
+        "react-modal": "^3.1.11",
+        "react-redux": "^5.0.6",
+        "react-router": "^4.2.0",
+        "react-router-dom": "^4.2.2",
+        "react-scripts": "^1.1.0",
+        "redux": "^3.7.2",
+        "request": "^2.83.0",
+        "spotify-web-api-js": "^0.23.0"
+    },
+    "scripts": {
+        "build-dev": "set NODE_ENV=development&& babel-node server.js",
+        "build-prod": "set NODE_ENV=production&& webpack --progress && babel-node server.js"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-core": "^6.26.0",
+        "babel-loader": "^7.1.2",
+        "babel-preset-es2015": "^6.24.1",
+        "babel-preset-react": "^6.24.1",
+        "css-loader": "^0.28.9",
+        "file-loader": "^1.1.6",
+        "html-webpack-plugin": "^2.30.1",
+        "node-sass": "^4.7.2",
+        "path": "^0.12.7",
+        "react-hot-loader": "^3.1.3",
+        "sass-loader": "^6.0.6",
+        "style-loader": "^0.20.1",
+        "url": "^0.11.0",
+        "url-loader": "^0.6.2",
+        "webpack": "^3.10.0",
+        "webpack-config": "^7.5.0",
+        "webpack-dev-middleware": "^2.0.4",
+        "webpack-hot-middleware": "^2.21.0"
+    }
 }
