@@ -5,8 +5,11 @@ import styles from '../styles/currentTrack.scss';
 import {fa_music_icon, fa_reload_icon, fa_left_icon, fa_right_icon, fa_play_icon, fa_pause_icon} from '../common/fonts';
 
 class CurrentTrack extends React.Component {
-    componentWillMount(props){
+    componentWillMount(){
         this.props.setTitle(PAGES.CURRENT_TRACK_TITLE);
+    }
+    
+    componentDidMount(){
         this.props.getCurrentTrack();
     }
 

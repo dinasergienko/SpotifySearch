@@ -15,12 +15,13 @@ class Playlists extends React.Component {
         }
     }
 
-    componentWillMount() {
+    componentWillMount(){
         this.props.setTitle(PAGES.PLAYLISTS_TITLE);
-        this.props.getPlaylists(this.state.currentPage);
     }
 
-    componentDidMount() {
+    componentDidMount(){
+        this.props.getPlaylists(this.state.currentPage);
+
         if (!this.playlistsComponent) return;
 
         this.playlistsComponent.addEventListener('scroll', (event) => {

@@ -14,11 +14,10 @@ import styles from '../styles/app.scss';
 import {fa_user_icon, fa_spotify_icon} from '../common/fonts';
 
 class App extends React.Component {
-    componentWillMount(){
+    componentDidMount(){
         if (localStorage.getItem(AUTH.ACCESS_TOKEN)){
             this.props.getCurrentUser();
             this.props.getCurrentTrack();
-            this.props.setTitle(PAGES.HOME_TITLE);
         }
     }
 
