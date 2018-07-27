@@ -22,7 +22,7 @@ class App extends React.Component {
     }
 
     render() {
-        let { isLoaded, isAuthorized, userId, logout, previewTrack, error } = this.props;
+        let { isAuthorized, userId, logout, previewTrack } = this.props;
         let profileLink = AUTH.SPOTIFY_PROFILE_UTL + userId;
 
         return (
@@ -49,10 +49,11 @@ class App extends React.Component {
                             </div>
                             <div className={styles.content}>
                                 <Switch>
-                                    <Route exact path={PAGES.SEARCH_ROUTE} component={Search} />
-                                    <Route exact path={PAGES.CURRENT_TRACK_ROUTE} component={CurrentTrack} />
-                                    <Route exact path={PAGES.PLAYLISTS_ROUTE} component={Playlists} />
+                                    {isAuthorized === true && <Route exact path={PAGES.SEARCH_ROUTE} component={Search} />}
+                                    {isAuthorized === true && <Route exact path={PAGES.CURRENT_TRACK_ROUTE} component={CurrentTrack} />}
+                                    {isAuthorized === true && <Route exact path={PAGES.PLAYLISTS_ROUTE} component={Playlists} />}
                                     <Route exact path={PAGES.LOGIN_ROUTE} component={Login} />
+                                    {isAuthorized !== true && <Redirect to={PAGES.LOGIN_ROUTE} />}
                                 </Switch>
                             </div>
                         </div>
@@ -62,8 +63,6 @@ class App extends React.Component {
                     <PopupWindow close={this.props.clearPreviewTrack}>
                         <TrackPreview previewTrack={previewTrack} />
                     </PopupWindow>}
-
-                    {(error || !localStorage.getItem(AUTH.ACCESS_TOKEN)) && !isAuthorized && <Redirect to={PAGES.LOGIN_ROUTE} />}
                 </div>
             </BrowserRouter>
         );

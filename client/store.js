@@ -1,6 +1,7 @@
 import { createStore, compose, applyMiddleware } from 'redux';
 import rootReducer from './reducers/index';
 import spotifyMiddleware from './middlewares/spotifyMiddleware';
+import { AUTH } from './common/constants';
 
 export const defaultState = {
     app: {
@@ -16,7 +17,7 @@ export const defaultState = {
     },
     auth: {
         isLoaded: false,
-        isAuthorized: false,
+        isAuthorized: localStorage.getItem(AUTH.ACCESS_TOKEN) != null,
         userId: '',
         type: ''
     },

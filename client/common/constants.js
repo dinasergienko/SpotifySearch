@@ -25,7 +25,7 @@ export const PAGES = {
     LOGIN_TITLE: "Login",
     LOGIN_ROUTE: "/login",
     SEARCH_TITLE: "Search",
-    SEARCH_ROUTE: "/search",
+    SEARCH_ROUTE: "/",
     CURRENT_TRACK_TITLE: "Now playing",
     CURRENT_TRACK_ROUTE: "/currentTrack",
     PLAYLISTS_TITLE: "Playlists",
